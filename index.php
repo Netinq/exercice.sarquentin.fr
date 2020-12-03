@@ -26,7 +26,7 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
 
         <meta name='language' content='FR'>
         <meta name='target' content='all'>
-        <meta name='theme-color' content='#FAEC71'>
+        <meta name='theme-color' content='#FCB040'>
 
         <link rel='shortcut icon' type='image/png' href='./assets/media/images/logo.png'>
         <link rel="apple-touch-icon" href="../assets/media/images/logo.png" />
