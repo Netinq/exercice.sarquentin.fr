@@ -38,12 +38,12 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
         <meta name='twitter:url' content='https://exercice.sarquentin.fr' />
         <meta name='twitter:domain' content='exercice.sarquentin.fr' />
         <meta name="twitter:description" content="Le volley-ball, ou volleyball1, est un sport collectif, il s'agit d'un des sports les plus pratiqués dans le monde." />
-        <meta name="twitter:image" content="<?= $domain.'/assets/media/images/meta.png' ?>" />
+        <meta name="twitter:image" content="<?= 'https://'.$domain.'/assets/media/images/meta.png' ?>" />
 
         <!-- Open Graph meta -->
         <meta property='og:title' content='Le volley-ball, un sport de rêve' />
         <meta property="og:description" content="Le volley-ball, ou volleyball1, est un sport collectif, il s'agit d'un des sports les plus pratiqués dans le monde." />
-        <meta property="og:image" content="<?= $domain .'/assets/media/images/meta.png' ?>" />
+        <meta property="og:image" content="<?= 'https://'.$domain .'/assets/media/images/meta.png' ?>" />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://exercice.sarquentin.fr' />
         <meta property='og:site_name' content='Go Volley' />
