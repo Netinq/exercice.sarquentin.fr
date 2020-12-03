@@ -14,6 +14,12 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
+                case '/history':
+                    ob_start();
+                    include __REALPATH__ . '/includes/history.php';
+                    $content = ob_get_clean();
+                    break;
+
                 case '/articles':
                     ob_start();
                     include __REALPATH__ . '/includes/articles.php';
