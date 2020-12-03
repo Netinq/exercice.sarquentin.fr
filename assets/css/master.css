@@ -1,0 +1,38 @@
+:root {
+  font-family: Corbel;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Corbel;
+  src: url(../fonts/CORBEL.TTF);
+}
+@font-face {
+  font-family: Corbel Bold;
+  src: url(../fonts/Corbel\ Bold.ttf);
+}
+@font-face {
+  font-family: Corbel Italic;
+  src: url(../fonts/Corbel\ Italic.ttf);
+}
+@font-face {
+  font-family: Corbel Light;
+  src: url(../fonts/corbel-light.ttf);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.row {
+  margin: 0 !important;
+}

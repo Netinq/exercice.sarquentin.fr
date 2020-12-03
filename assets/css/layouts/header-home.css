@@ -1,0 +1,17 @@
+header nav ul li {
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+  font-family: Corbel;
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-top: 12.5px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 35px;
+}
+
+header nav ul li:hover {
+  background-color: rgba(245, 245, 245, 0.1);
+  transition: .3s all;
+}
