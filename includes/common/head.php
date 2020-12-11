@@ -3,7 +3,7 @@
         <a href="/"><img id="header-logo" src="../../assets/media/images/logo.png" alt="Logo"></a>
     </div>
     <div class="col-9">
-        <nav class="d-none d-sm-block">
+        <nav class="d-none d-md-block">
             <ul>
                 <a href="<?= $domain ?>/"><li>Accueil</li></a>
                 <a href="<?= $domain ?>/articles"><li>Articles</li></a>
