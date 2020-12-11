@@ -1,0 +1,78 @@
+#home {
+
+  background-image: url(../../media/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+
+}
+
+@media screen and (max-width: 768px)
+{
+  #home {
+    background-position: center;
+  }
+}
+
+#home #title-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home #title-content h1 {
+  white-space: pre-line;
+  color: #3D3D3D;
+  font-size: 5rem;
+}
+
+#home #title-content h1 i {
+  font-style: normal;
+  color: #FCB040;
+  font-size: 4rem;
+  line-height: 1;
+}
+@media (max-width: 576px) {
+  #home #title-content h1 {
+    font-size: 2.5rem;
+  }
+  #home #title-content h1 i {
+    font-size: 2rem;
+  }
+}
+
+#home #title-content #history {
+  margin-top: 50px;
+  width: 35%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #FCB040;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 35px;
+  font-family: Corbel Bold;
+  font-size: 1.2rem;
+  transition: .3s all;
+}
+@media (max-width: 800px) {
+  #home #title-content #history {
+    font-size: 1rem;
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  #home #title-content #history {
+    font-size: 1rem;
+    width: 75%;
+  }
+}
+
+#home #title-content #history:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px #afafaf;
+}

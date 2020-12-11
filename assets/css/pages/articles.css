@@ -1,0 +1,148 @@
+#articles {
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  padding-top: 150px;
+}
+
+#articles .title-content {
+  position: relative;
+}
+
+#articles .title-content h1 {
+  color: #3D3D3D;
+  position: relative;
+  font-size: 3rem;
+}
+
+#articles .title-content h1::before {
+
+  content: ' ';
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  width: 150px;
+  height: 5px;
+  background-color: #FCB040;
+
+}
+
+#articles .articles-content  {
+  padding-top: 50px;
+}
+
+#articles .articles-content article {
+
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border: 2px solid #eeeeee;
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+#articles .articles-content article h2 {
+  font-size: 2rem;
+  color: #3D3D3D;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+#articles .articles-content article h2::before {
+
+  content: ' ';
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  width: 150px;
+  height: 20px;
+  background-color: rgba(252, 177, 64, 0.25);
+  z-index: -1;
+}
+
+#articles .articles-content article h3 {
+  font-size: 1rem;
+  color: #FCB040;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+#articles .articles-content article small {
+  font-size: 1rem;
+  color: #3D3D3D;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+
+#articles .articles-content article p {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#articles .articles-content article a {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+#articles .articles-content article .more {
+  color: #FCB040;
+  border: 2px solid #FCB040;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 25px;
+  transition: .3s all;
+}
+#articles .articles-content article .more:hover {
+  background-color: #FCB040;
+  color: #ffffff;
+}
+
+#articles .articles-content article .article-content {
+  width: 75%;
+  padding-right: 25px;
+}
+
+#articles .articles-content article .img-content {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#articles .articles-content article .img-content img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 992px)
+{
+  #articles .articles-content article {
+  
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border: 2px solid #eeeeee;
+    padding: 0px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  #articles .articles-content article .article-content {
+    width: 100%;
+    padding: 25px;
+  }
+
+  #articles .articles-content article .img-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+

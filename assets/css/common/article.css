@@ -1,0 +1,41 @@
+#article {
+
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+}
+
+#article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#article h1 {
+  color: #FCB040;
+  font-size: 3rem;
+  font-family: Corbel;
+  margin-bottom: 25px;
+}
+
+#article h2 {
+  color: #3D3D3D;
+  font-size: 2rem;
+  font-family: Corbel;
+}
+
+#article h3 {
+  color: #3D3D3D;
+  font-size: 1.6rem;
+  font-family: Corbel;
+  margin-bottom: 25px;
+}
+
+#article p {
+  color: #3D3D3D;
+  font-size: 1.2rem;
+  font-family: Corbel;
+  white-space: pre-line;
+}

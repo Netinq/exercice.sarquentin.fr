@@ -1,15 +1,18 @@
-var burger = document.querySelector('#burger');
-if (burger) {
+function headDisplay()
+{
+    const nav = document.querySelector('nav');
+    const burgerLine = document.getElementsByClassName('burger-line');
 
-    burger.onclick = function (ev) {
-        var target = ev.currentTarget,
-            nav = document.querySelector('nav');
-        if (target.classList.contains('burger-closed')) {
-            target.classList.remove('burger-closed');
-            nav.classList.remove('display-nav');
-        } else {
-            target.classList.add('burger-closed');
-            nav.classList.add('display-nav');
-        }
+    if (nav.classList.contains('d-none')) { 
+        nav.classList.remove('d-none'); 
+        Array.from(burgerLine).forEach(elem => {
+            elem.classList.add('burger-line-close'); 
+        });
+    }
+    else { 
+        nav.classList.add('d-none'); 
+        Array.from(burgerLine).forEach(elem => {
+            elem.classList.remove('burger-line-close'); 
+        });
     }
 }

@@ -2,7 +2,9 @@
 
 define('__REALPATH__', __DIR__);
 
-$domain = $_SERVER['HTTP_HOST'];
+$protocal = 'http';
+if ($_SERVER['HTTPS'] == 'on') $protocal = 'https';
+$domain = $protocal.'://'.$_SERVER['HTTP_HOST'];
 $uri = $_SERVER['REQUEST_URI'];
 $segments = explode('/', $uri);
 
@@ -28,8 +30,8 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
         <meta name='target' content='all'>
         <meta name='theme-color' content='#FCB040'>
 
-        <link rel='shortcut icon' type='image/png' href='./assets/media/images/logo.png'>
-        <link rel="apple-touch-icon" href="../assets/media/images/logo.png" />
+        <link rel='shortcut icon' type='image/png' href='<?= $domain ?>/assets/media/images/logo.png'>
+        <link rel="apple-touch-icon" href="<?= $domain ?>/assets/media/images/logo.png" />
 
         <!-- Twitter Card meta -->
         <meta name='twitter:card' content='summary'>
@@ -38,12 +40,12 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
         <meta name='twitter:url' content='https://exercice.sarquentin.fr' />
         <meta name='twitter:domain' content='exercice.sarquentin.fr' />
         <meta name="twitter:description" content="Le volley-ball, ou volleyball1, est un sport collectif, il s'agit d'un des sports les plus pratiqués dans le monde." />
-        <meta name="twitter:image" content="<?= 'https://'.$domain.'/assets/media/images/meta.png' ?>" />
+        <meta name="twitter:image" content="<?= $domain.'/assets/media/images/meta.png' ?>" />
 
         <!-- Open Graph meta -->
         <meta property='og:title' content='Le volley-ball, un sport de rêve' />
         <meta property="og:description" content="Le volley-ball, ou volleyball1, est un sport collectif, il s'agit d'un des sports les plus pratiqués dans le monde." />
-        <meta property="og:image" content="<?= 'https://'.$domain .'/assets/media/images/meta.png' ?>" />
+        <meta property="og:image" content="<?= $domain .'/assets/media/images/meta.png' ?>" />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://exercice.sarquentin.fr' />
         <meta property='og:site_name' content='Go Volley' />
@@ -59,15 +61,21 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
         <title>Le volley-ball, un sport de rêve</title>
 
         <!-- STATIC Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./assets/css/master.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-grid.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/reboot.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/layouts/header.css">
-        <link rel="stylesheet" type="text/css" href="./assets/css/layouts/<?= ($uri=='/') ? 'header-home.css' : 'header-other.css'?>">
-        <link rel="stylesheet" type="text/css" href="./assets/css/common/home.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/master.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/bootstrap-grid.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/reboot.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/animations.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/layouts/header.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/layouts/footer.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/layouts/<?= ($uri=='/') ? 'header-home.css' : 'header-other.css'?>">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/pages/home.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/pages/articles.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/pages/legal.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/pages/contact.css">
+        <link rel="stylesheet" type="text/css" href="<?= $domain ?>/assets/css/common/article.css">
 
         <!-- STATIC Scripts -->
-        <!-- <script src="{{asset('js/app.js')}}"></script> -->
+        <script src="<?= $domain ?>/assets/js/script.js"></script>
 
     </head>
     <body>

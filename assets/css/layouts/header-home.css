@@ -11,7 +11,146 @@ header nav ul li {
   border-radius: 35px;
 }
 
+@media screen and (max-width: 1000px)
+{
+  header nav ul li {
+    color: #3d3d3d;
+  }
+}
 header nav ul li:hover {
   background-color: rgba(245, 245, 245, 0.1);
   transition: .3s all;
+}
+
+.menu-m
+{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, .9);
+    display: none;
+    user-select: none;
+    transition: .3 all;
+    animation: menu-m 1s;
+}
+
+@keyframes menu-m
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu-m .landing
+{
+    position: absolute;
+    top: 0;
+    right: -7vw;
+    height: 40vh;
+    animation: menu-landing 1s, opacity;
+}
+
+@keyframes menu-landing
+{
+    0% {
+        transform: translateX(100vw) translateY(-50vh);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.menu-m .top
+{
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 100px;
+    display: flex;
+    align-items:center;
+    position: absolute;
+    right: var(--margin-side);
+    user-select: none;
+}
+
+.menu-m .top img
+{
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.menu-m .top span
+{
+    color: #353535;
+    font-size: 1.5rem;
+}
+
+.menu-m .list
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-height: 730px)
+{
+    .menu-m .top
+    {
+        right: var(--margin-side);
+    }
+    .menu-m #close img
+    {
+        height: 20px;
+    }
+    .menu-m .top span
+    {
+        color: #353535;
+        font-size: 1.2rem;
+    }
+}
+
+.menu-m .list .elem
+{
+    text-align: center;
+    width: 100vw;
+    height: 10vh;
+    line-height: 10vh;
+    color: #353535;
+    font-size: 4vh;
+    font-variation-settings: "wght" 300;
+    position: relative;
+    animation: menu-elem 1s 1s, opacity 1s;
+}
+
+.menu-m .list .elem::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 30vw;
+    width: 40vw;
+    height: 2px;
+    background-color: #eeeeee;
+}
+
+@keyframes menu-elem
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

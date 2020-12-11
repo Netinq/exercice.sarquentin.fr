@@ -31,3 +31,67 @@ header nav ul .header-btn:hover {
   background-color: #FCB040;
   color: #ffffff;
 }
+
+#burger {
+  top: 12.5px;
+  height: 75px;
+  width: 75px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #FCB040;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 17.5px;
+  cursor: pointer;
+  z-index: 100000;
+}
+#burger .burger-line {
+  height: 3px;
+  width: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  transition: .3s all;
+}
+#burger .burger-line-close:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#burger .burger-line-close:nth-child(2) {
+  opacity: 0;
+}
+#burger .burger-line-close:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+@media screen and (max-width: 768px)
+{
+  header nav {
+    position: fixed;
+    background-color: #FCB040;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav li {
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+  }
+  header nav .header-btn {
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+  }
+}
